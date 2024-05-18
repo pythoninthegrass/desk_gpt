@@ -34,7 +34,8 @@
 </script>
 
 <main class="max-w-2xl mx-auto p-4">
-    <h1 class="text-2xl font-bold mb-4">Chat with GPT-4.0</h1>
+    <h1 class="text-8xl font-bold mb-4">DeskGPT</h1>
+    <h3 class="text-xs font-semibold mb-2">ChatGPT 4o</h3>
     <div class="mb-4 space-y-2 chat-history">
         {#each chatHistory as chat (chat.content)}
             <div class="p-2 rounded {chat.role === 'user' ? 'bg-blue-100' : 'bg-green-100'}">
