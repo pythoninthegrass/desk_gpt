@@ -17,3 +17,5 @@ Silly project to mimic the fantastic [QuickGPT](https://sindresorhus.gumroad.com
   * Add global shortcut
   * Add notifications
 * UI/UX design tweaks
+  * Change font
+  * Add loading spinner
