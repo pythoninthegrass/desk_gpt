@@ -52,6 +52,30 @@ tasks:
     cmds:
       - poetry run ruff format --respect-gitignore
 
+  run:
+    desc: "Run the backend or frontend"
+    summary: |
+      task run -- <front|back>
+    cmds:
+      - |
+        case "{{.CLI_ARGS}}" in
+          back)
+            (
+              cd "{{.TLD}}/backend" || exit
+              poetry run python run_django.py
+            )
+            ;;
+          front)
+            (
+              cd "{{.TLD}}/app" || exit
+              npm run dev
+            )
+            ;;
+          *)
+            echo "Invalid CLI_ARGS"
+            ;;
+        esac
+
   test:
     desc: "Run tests"
     cmds:

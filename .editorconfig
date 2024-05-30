@@ -23,12 +23,12 @@ indent_size = 4
 [*.{html,xml,js,css,py}]
 charset = utf-8
 
-# python
-[*.py]
+# python, rust
+[*.{py,rs}]
 indent_style = space
 indent_size = 4
 
 # webdev et al
-[*.{html,xml,js,css,json,jsonc,gql,lua,tf,tfvars,yml,yaml}]
+[*.{html,xml,js,css,json,jsonc,gql,lua,tf,tfvars,yml,yaml,Svelte}]
 indent_style = space
 indent_size = 2
