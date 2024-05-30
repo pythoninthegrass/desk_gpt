@@ -1,6 +1,7 @@
 <script lang="ts">
   import { onMount } from 'svelte';
   import { marked } from 'marked';
+  import { register } from '@tauri-apps/api/globalShortcut';
 
   type ChatMessage = {
     role: 'user' | 'assistant';
@@ -31,6 +32,17 @@
       console.error('Failed to send message');
     }
   }
+
+  onMount(() => {
+    // Register a global shortcut
+    register('CmdOrCtrl+Shift+Alt+G', async () => {
+      console.log('Shortcut pressed');
+    }).then(() => {
+      console.log('Shortcut registered');
+    }).catch((e) => {
+      console.error('Failed to register shortcut', e);
+    });
+  });
 </script>
 
 <main class="max-w-2xl mx-auto p-4">
