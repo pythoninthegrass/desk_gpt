@@ -3,6 +3,8 @@ version: "3.0"
 set: ['e', 'u', 'pipefail']
 shopt: ['globstar']
 
+# TODO: might need to set working directory to `backend`
+
 tasks:
   default:
     desc: "Default task"
