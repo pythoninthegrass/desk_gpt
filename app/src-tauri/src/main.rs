@@ -61,15 +61,16 @@ fn main() {
                 _ => {}
             }
         })
-        .on_window_event(|event| match event.event() {
-            tauri::WindowEvent::Focused(is_focused) => {
-                // detect click outside of the focused window and hide the app
-                if !is_focused {
-                    event.window().hide().unwrap();
-                }
-            }
-            _ => {}
-        })
+        // TODO: add better error handling for when it's on another display then where the cursor is located
+        // .on_window_event(|event| match event.event() {
+        //     tauri::WindowEvent::Focused(is_focused) => {
+        //         // detect click outside of the focused window and hide the app
+        //         if !is_focused {
+        //             event.window().hide().unwrap();
+        //         }
+        //     }
+        //     _ => {}
+        // })
         .setup(move |app| {
             // Set activation policy to Accessory to prevent the app icon from showing on the dock
             app.set_activation_policy(tauri::ActivationPolicy::Accessory);
