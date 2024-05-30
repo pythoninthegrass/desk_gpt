@@ -61,7 +61,7 @@ fn main() {
                 _ => {}
             }
         })
-        // TODO: add better error handling for when it's on another display then where the cursor is located
+        // TODO: add better error handling for when it's on another display than where the cursor is located
         // .on_window_event(|event| match event.event() {
         //     tauri::WindowEvent::Focused(is_focused) => {
         //         // detect click outside of the focused window and hide the app

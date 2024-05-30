@@ -4,6 +4,7 @@ Silly project to mimic the fantastic [QuickGPT](https://sindresorhus.gumroad.com
 
 ## Minimum requirements
 
+* macOS 12+
 * [Python 3.11](https://www.python.org/downloads/)
 * [Poetry](https://python-poetry.org/docs/)
 * [Node.js](https://nodejs.org/en/download/)
@@ -62,16 +63,21 @@ npm run tauri dev       # bunx tauri dev
 * Package the app
   * Create a distributable package
   * Setup CI
+* Add upload file feature
+  * Add file attachments
+* UI/UX design tweaks
+  * Add loading spinner
+  * Expand flexbox(?) viewport width
+  * Fixed width for chat form
+  * Change font
+  * Better code snippet formatting
+  * Streaming responses
+  * Copy code blocks
 * Create sidebar
   * `+ New chat` button
   * Chat history with title truncated
   * `Clear conversations` button
   * `Log out` button
-* UI/UX design tweaks
-  * Better code snippet formatting
-  * Add loading spinner
-  * Fixed width for chat form
-  * Change font
 * Auth (Login / Logout)
   * Save token to disk
   * Load token from disk
