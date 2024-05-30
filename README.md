@@ -81,3 +81,8 @@ npm run tauri dev       # bunx tauri dev
 * Auth (Login / Logout)
   * Save token to disk
   * Load token from disk
+* Add tests
+  * Backend
+  * Frontend
+* Handle monorepo-ish structure
+  * Either dependencies all go in the root or in the respecitve subdirectory
